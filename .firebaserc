@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "thu-shop"
+  },
+  "targets": {
+    "thu-shop": {
+      "hosting": {
+        "archive": [
+          "thehigherups-archive"
+        ]
+      }
+    }
+  }
+}

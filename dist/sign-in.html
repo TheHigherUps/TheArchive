@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign In</title>
+        <link
+            rel="shortcut icon"
+            href="/assets/img/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/account.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.thehigherups.org/hidden/attachments/files/web/archive/thehigherupstags.css"
+        />
+        <script src="/toast.js"></script>
+        <link rel="stylesheet" href="/toast.css" />
+    </head>
+    <body>
+        <!-- <header>
+            <div class="brand">
+                <h1 id="display">TheHigherUps Archive</h1>
+            </div>
+        </header> -->
+        <div class="body__wrapper">
+            <div class="login__wrapper">
+                <div class="img__wrapper">
+                    <img
+                        src="/assets/img/archive-logo.png"
+                        alt="TheHigherUps Archive Logo"
+                        id="login__image"
+                    />
+                </div>
+                <div class="form__wrapper">
+                    <form class="login__form">
+                        <h1>TheHigherUps Archive</h1>
+                        <p>Sign In To Continue</p>
+                        <br />
+                        <div class="user__input">
+                            <input
+                                type="text"
+                                name="loginEmail"
+                                id="loginEmail"
+                                required
+                            />
+                            <label for="loginEmail">Enter Email</label>
+                        </div>
+                        <div class="user__input">
+                            <input
+                                type="password"
+                                name="loginPassword"
+                                id="loginPassword"
+                                required
+                            />
+                            <label for="loginPassword">Enter Password</label>
+                        </div>
+                        <button id="loginButton">Submit</button>
+                        <p class="error__text"></p>
+                        <p class="tos__text" style="color: white">
+                            By Signing In, You Agree To TheHigherUps
+                            <a
+                                href="/tos.html"
+                                style="
+                                    text-decoration: underline;
+                                    color: inherit;
+                                    padding: 0;
+                                "
+                                id="tooltipHover"
+                                >Archive TOS</a
+                            >
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <thehigherups title="Protected By TheHigherUps Security Protocol">
+            <thehigherupsdata>
+                <thu-data
+                    ups-data="08937593427590827309481101"
+                    id="accountData"
+                >
+                    <thu-account-data></thu-account-data>
+                </thu-data>
+                <thu-data site-data="39287579283758923742451101"
+                    >site_data</thu-data
+                >
+                <thu-data id-data="11014809235734875937451101"
+                    >thehigherups_id</thu-data
+                >
+                <thu-data
+                    huasp-data="098341093480918341HUASP"
+                    huasp-version="1.7.2"
+                    >huasp_data</thu-data
+                >
+            </thehigherupsdata>
+            <thehigherupsseal></thehigherupsseal>
+        </thehigherups>
+        <!-- <header>
+        <div class="brand"><h1><a href="/"id="display">TheHigherUps Archive</a></h1></div>
+        <nav>
+            <ul>
+                <li><a href="/" class="navLink fs-32">Home</a></li>
+                <li><a href="/" class="navLink active fs-32">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="fullContainer">
+        <div class="accountBody loginBody" style="color: white;">
+            <h1 class="accountHeading">TheHigherUps</h1>
+            <p class="accountTitle">Sign In</p>
+            <p class="accountSubTitle">Sign In To Continue To The Archive</p>
+            <form class="accountForm loginForm">
+                <label for="loginEmail" class="accountLabel">Enter Email:</label><br>
+                <input type="email" name="loginEmail" id="loginEmail" class="accountInput" placeholder="Enter Email Address" required>
+                <label for="loginPassword" class="accountLabel">Enter Password: </label><br>
+                <input type="password" name="loginPassword" id="loginPassword" class="accountInput" placeholder="Enter Password" required>
+                <button type="submit" class="accountButton loginButton">Sign In</button><br>
+                <p class="errorText"></p>
+                <p>By Signing In, You Agree To TheHigherUps Archive TOS</p>
+                <a href="//accounts.thehigherups.org/password-reset" target="_blank" class="bottomText loginLink link">Forgot Password?</a>
+                <a href="//accounts.thehigherups.org/create-account" target="_blank" class="bottomText loginLink link">Create Account</a>
+            </form>
+        </div>
+    </div> -->
+    </body>
+    <script src="/signin.js"></script>
+    <script>
+        const x = new Toast({
+            message:
+                'New Sale At TheHigherUps Shop. New Product Finally Released!',
+            type: 'success',
+            customButtons: [
+                {
+                    text: 'Go To Shop',
+                    onClick: () => {
+                        window.open('https://l.thehigherups.org/QEF9')
+                    },
+                },
+            ],
+        })
+        const alert = setInterval(() => {
+            Swal.fire({
+                position: 'top-end',
+                title: 'Website Under Contruction',
+                text: 'This website is still under contruction and will be un-usable until the completion of this project.',
+                timer: 5500,
+                icon: 'warning',
+            })
+            clearInterval(alert)
+        }, 100)
+        // const i = setInterval(() => {
+        //     Swal.fire({
+        //         title: 'Wanna Sign Up For Some Emails?',
+        //         text: "Don't Worry, We'll Send You Useless Emails",
+        //         input: 'email',
+        //         showCancelButton: true,
+        //         width: '600px',
+        //         preConfirm: () => {
+        //             Swal.fire({
+        //                 title: 'You Have Been Signed Up For Useless Emails',
+        //                 html: "You Can't Unsubscribe",
+        //                 timer: 5000,
+        //                 timerProgressBar: true,
+        //                 width: '600px',
+        //                 confirmButtonText: 'Close',
+        //             })
+        //         },
+        //     })
+        //     clearInterval(i)
+        // }, 4200)
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>

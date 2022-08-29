@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Start Time: Jun 5, 2022 1:29 AM-->
+<!-- Hours of Life Wasted: 12 Hours-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheHigherUps</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.thehigherups.org/hidden/attachments/files/web/archive/thehigherupstags.css">
+</head>
+
+<body>
+    <div class="offline" style="display: none;">
+        <h1>You Are Offline. File upload disabled</h1>
+    </div>
+    <header>
+        <div class="brand">
+            <h1><a href="/" id="display">TheHigherUps Archive</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="one"><a href="/" class="navLink active fs-32">Home</a></li>
+                <li class="one"><a href="/sign-in.html" class="navLink fs-32 siButton">Sign In</a></li>
+                <li class="one"><button class="navLink fs-32 suButton" style="display: none;">Sign Out</button></li>
+                <li><button class="mobile-sign-out material-icons">logout</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="imageGrid">
+            <div class="imageDisplay">
+            </div>
+        </div>
+    </main>
+    <div class="uploadButton">
+        <input class="imageUpload" type="file" title="Upload Files" multiple><span
+            class="material-icons upload">file_upload</span></input>
+        <span class="upload-percent" style="font-size: 15px;"></span>
+    </div>
+    <thehigherups title="Protected By TheHigherUps Security Protocol">
+        <thehigherupsdata>
+            <thu-data ups-data="08937593427590827309481101" id="accountData">
+                <thu-account-data></thu-account-data>
+            </thu-data>
+            <thu-data site-data="39287579283758923742451101">site_data</thu-data>
+            <thu-data id-data="11014809235734875937451101">thehigherups_id</thu-data>
+            <thu-data huasp-data="098341093480918341HUASP" huasp-version="1.7.2">huasp_data</thu-data>
+        </thehigherupsdata>
+        <thehigherupsseal></thehigherupsseal>
+    </thehigherups>
+</body>
+<script src="/main.js"></script>
+<script>
+    window.addEventListener('offline', () => {
+        document.querySelector('.offline').style.display = "block"
+        document.querySelector('.upload').innerText = 'file_download_off'
+        document.querySelector('.imageUpload').setAttribute('disabled', '')
+    })
+    window.addEventListener('online', () => {
+        document.querySelector('.offline').style.display = "none"
+        document.querySelector('.upload').innerText = 'file_upload'
+        document.querySelector('.imageUpload').removeAttribute('disabled', '')
+    })
+    window.addEventListener('contextmenu', (e) => {
+        e.preventDefault()
+    })
+</script>
+
+</html>

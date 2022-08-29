@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+        }
+
+        html {
+            height: 100vh;
+        }
+
+        body {
+            color: white;
+            background: linear-gradient(123deg, #121212, #101010)
+        }
+
+        header {
+            width: 100%;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(#fff, #fefe);
+            color: black;
+        }
+
+        header h1 {
+            margin-left: 30px;
+        }
+
+        .wrapper {
+            height: auto;
+            width: 650px;
+            background-color: red;
+            margin-inline: auto;
+            border-inline: 1px solid gray;
+        }
+
+        .wrapper h1 {
+            text-align: center;
+            padding: 15px 10px;
+        }
+
+        .post {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            border-block: 1px solid gray;
+        }
+
+        .userInfo {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 75px 350px;
+            grid-template-columns: 75px 350px;
+            font-size: 20px;
+            gap: 15px;
+        }
+
+        .userInfo img {
+            max-width: 75px;
+            max-height: 75px;
+            width: 75px;
+            height: 75px;
+            border: 1px solid gray;
+            border-radius: 50px;
+            image-rendering: pixelated;
+            image-resolution: 10px;
+            object-fit: cover;
+
+        }
+
+        .material-icons {
+            user-select: none;
+        }
+
+        .userAttr {
+            vertical-align: middle;
+        }
+
+        .postBody {
+            margin: 10px;
+            font-size: 15px;
+        }
+
+        .postInfo {
+            position: absolute;
+            margin-left: 15px;
+            bottom: 5px;
+            left: 0;
+        }
+
+        .postSettings {
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+
+        .settingsWrapper {
+            display: none;
+            position: absolute;
+            top: 35px;
+            right: 5px;
+            height: 143px;
+            width: 150px;
+            background-color: darkgray;
+            border-radius: 5px;
+            border: 1px solid black;
+            transform: rotate(0deg);
+            box-shadow: 0 0 15px 1px #fff;
+        }
+
+        .settingsActive {
+            display: initial;
+        }
+
+        .settingsIconActive {
+            transition: 0.2s ease-in-out;
+            transform: rotate(90deg);
+        }
+
+        .settingsIconInActive {
+            transition: 0.2s ease-in-out;
+            transform: rotate(0deg);
+        }
+
+        .settingsOption {
+            user-select: none;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 25% 75%;
+            height: 25px;
+            padding: 5px;
+            border-bottom: 1px solid gray;
+            place-items: center;
+        }
+
+        .lastOption {
+            border: none;
+        }
+
+        .optionIcon {
+            font-size: 15px;
+            vertical-align: middle;
+        }
+
+        .userNoti {
+            display: none;
+            width: 75ch;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background-color: gray;
+            border-radius: 5px;
+            place-content: center;
+            animation: noti 0.5s ease 0s 1 normal forwards;
+            text-align: center;
+
+        }
+
+        .userNoti * {
+            padding: 15px 5px;
+        }
+
+        .notiIcon {
+            font-size: 35px;
+        }
+
+        @keyframes noti {
+            0% {
+                opacity: 0;
+                transform: rotateX(-100deg);
+                transform-origin: top;
+            }
+
+            100% {
+                opacity: 1;
+                transform: rotateX(0deg);
+                transform-origin: top;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TheHigherUps Posts</h1>
+    </header>
+    <div class="userNoti">
+        <span class="material-icons notiIcon">delete</span>
+        <h1>Tolve</h1>
+    </div>
+    <main>
+        <div class="wrapper">
+            <h1>Posts</h1>
+            <div class="post">
+
+                <div class="postSettings">
+                    <span class="material-icons settingIcon">more_horiz</span>
+                </div>
+                <div class="settingsWrapper">
+                    <div class="settingsOption" style="color: darkred;">
+                        <span class="material-icons optionIcon">delete</span>
+                        <p>Delete Post</p>
+                    </div>
+                    <div class="settingsOption">
+                        <span class="material-icons optionIcon">flag</span>
+                        <p>Report Post</p>
+                    </div>
+                    <div class="settingsOption">
+                        <span class="material-icons optionIcon">person_add</span>
+                        <p>Follow User</p>
+                    </div>
+                    <div class="settingsOption lastOption">
+                        <span class="material-icons optionIcon">block</span>
+                        <p>Block User</p>
+                    </div>
+                </div>
+                <div class="userInfo">
+                    <img src="https://lh6.googleusercontent.com/MUU7Jd3wXMW9nJbnTHRxWgOjELYp95kShaEEIBFQ0V1SVmA73TxakLsjABfEWZFifP2D4wNgpBn5lWsMiVXqjfE=w1280"
+                        alt="User Profile Photo">
+                    <div>
+                        <p>TheHigherUps Classified<span class="material-icons userAttr">verified</span></p>
+                        <p>@thehigherups</p>
+                    </div>
+                </div>
+                <div class="postBody">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                        quis enim. Donec.</p>
+                </div>
+                <form class="usernameSeacrh">
+                    <input type="text" name="username" id="username">
+                    <button>Check</button>
+                </form>
+                <div class="postInfo">
+                    12:20PM Jan 1, 1999
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+<script>
+    const settingsMenu = document.querySelector('.postSettings')
+    const settingMenuIcon = document.querySelector('.settingIcon')
+    const settingWrapper = document.querySelector('.settingsWrapper')
+    const settingsOption = settingWrapper.querySelectorAll('.settingsOption')
+    console.log(settingsOption)
+    settingsMenu.addEventListener('click', () => {
+        if (settingWrapper.classList.contains('settingsActive')) {
+            settingWrapper.classList.remove('settingsActive')
+            settingMenuIcon.classList.remove('settingsIconActive')
+            settingMenuIcon.classList.add('settingsIconInActive')
+            settingMenuIcon.innerText = 'more_horiz'
+
+        } else {
+            settingWrapper.classList.add('settingsActive')
+            settingMenuIcon.classList.add('settingsIconActive')
+            settingMenuIcon.classList.remove('settingsIconInActive')
+            settingMenuIcon.innerText = 'cancel'
+        }
+    })
+    settingsOption.forEach(option => {
+        option.addEventListener('click', () => {
+            switch (option.children[1].innerText) {
+                case 'Delete Post':
+                    console.log('Deleted')
+                    settingWrapper.classList.remove('settingsActive')
+                    settingMenuIcon.classList.remove('settingsIconActive')
+                    settingMenuIcon.classList.add('settingsIconInActive')
+                    settingMenuIcon.innerText = 'more_horiz'
+                    showNoti('delete')
+                    break;
+                case 'Report Post':
+                    console.log('Reported')
+                    settingWrapper.classList.remove('settingsActive')
+                    settingMenuIcon.classList.remove('settingsIconActive')
+                    settingMenuIcon.classList.add('settingsIconInActive')
+                    settingMenuIcon.innerText = 'more_horiz'
+                    showNoti('report')
+                    break;
+                case 'Follow User':
+                    console.log('User Followed')
+                    settingWrapper.classList.remove('settingsActive')
+                    settingMenuIcon.classList.remove('settingsIconActive')
+                    settingMenuIcon.classList.add('settingsIconInActive')
+                    settingMenuIcon.innerText = 'more_horiz'
+                    showNoti('add')
+                    break;
+                case 'Block User':
+                    console.log('User Blocked')
+                    settingWrapper.classList.remove('settingsActive')
+                    settingMenuIcon.classList.remove('settingsIconActive')
+                    settingMenuIcon.classList.add('settingsIconInActive')
+                    settingMenuIcon.innerText = 'more_horiz'
+                    showNoti('block')
+            }
+
+        })
+    })
+    function showNoti(attr) {
+        const notiBanner = document.querySelector('.userNoti')
+        const notiText = notiBanner.querySelector('h1')
+        const notiIcon = notiBanner.querySelector('span')
+        notiBanner.style.display = 'none'
+        notiText.innetText = ' '
+
+        switch (attr) {
+            case 'delete':
+                notiBanner.style.display = "inline-flex"
+                notiText.innerText = 'Post Deleted'
+                notiIcon.innerText = 'delete'
+                break;
+            case 'report':
+                notiBanner.style.display = "inline-flex"
+                notiText.innerText = 'Post Reported'
+                notiIcon.innerText = 'flag'
+                break;
+            case 'add':
+                notiBanner.style.display = "inline-flex"
+                notiText.innerText = 'User Followed'
+                notiIcon.innerText = 'person_add'
+                break;
+            case 'block':
+                notiBanner.style.display = "inline-flex"
+                notiText.innerText = 'User Blocked'
+                notiIcon.innerText = 'block'
+                break;
+        }
+        const x = setTimeout(() => {
+            notiBanner.style.display = "none"
+            notiText.innerText = ' '
+            notiIcon.innerText = ''
+        }, 2500)
+    }
+
+</script>
+<script src="username.js"></script>
+
+</html>

@@ -1,0 +1,277 @@
+
+.fullContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.accountButton {
+    width: 220px;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 18px;
+    border: 1px solid hsl(0, 0%, 50%);
+}
+.accountButton:hover {
+    background-color:hsl(0, 0%, 30%);
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
+}
+.accountButton:active {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+}
+.logoutCont {
+    position: relative;
+    width: 255px;
+    top: 25px;
+    left: 25px;
+    margin: 0;
+}
+.accountInput {
+    width: 330px;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 18px;
+    border: 1px solid hsl(0, 0%, 50%);
+}
+.accountLabel {
+    font-size: 22px;
+}
+.err {
+    display: block;
+    height: 15px;
+}
+.errText {
+    display: block;
+    height: 15px;
+    margin-top: 15px;
+    color: darkred;
+}
+.cont {
+    width: 440px;
+    height: 240px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-radius: 50px;
+    background-color: rgb(79, 79, 79);
+
+}
+.cont * {
+    padding: 1rem;
+}
+.cool {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+.cool p {
+    
+    color: rgb(25, 25, 25);
+}
+.cool p::-moz-selection {
+    color: rgba(77, 75, 75, 0.361);
+}
+.cool p::selection {
+    color: rgba(77, 75, 75, 0.361);
+}
+@media only screen and (max-width: 440px) {lgillll
+    div {
+        width: 100%;
+        text-align: center;
+    }
+    .logoutCont {
+        left: 0;
+    }
+}
+.accountHeading {
+    padding: 1em;
+}
+.accountBody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-inline: auto;
+    width: 500px;
+    height: auto;
+    border: 0.75px solid white;
+    border-radius: 15px;
+}
+.createBody {
+    /* margin-block: 15px; */
+    width: 600px;
+    height: 100vh;
+}
+.accountForm {
+    width: 90%;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.accountLabel {
+    font-size: 20px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+}
+.accountTitle {
+    font-size: 25px;
+    font-weight: 500;
+}
+.accountSubTitle {
+    padding: 1em;
+    font-size: 20px;
+}
+.accountInput {
+    width: 100%;
+    margin: 15px;
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 8px;
+    font-size: 25px;
+    padding: 0.25em;
+}
+.accountInput:focus,
+.accountInputShort:focus {
+    outline: 2px solid var(--color-main-blue);
+}
+.accountName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.createBody {
+    height: 750px;
+}
+.accountInputShort {
+    width: 40%;
+    margin: 15px;
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 8px;
+    font-size: 25px;
+    padding: 0.25em;
+}
+.accountButton {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    font-size: 25px;
+    padding-inline: 25px;
+    padding-block: 5px;
+}
+.accountButton:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 5px hsl(0, 0%, 50%);
+            box-shadow: 0px 0px 5px hsl(0, 0%, 50%);
+}
+.loginButton,
+.createButton,
+.resetPasswordButton {
+    background-color: hsl(206, 55%, 39%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 60%;
+}
+.bottomText {
+    margin-top: 25px;
+    color: var(--color-gray);
+    font-size: 18px;
+}
+.loginLink,
+.createLink,
+.resetLink {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+}
+.link {
+    color: var(--color-main-blue);
+    padding: 8px;
+    border-radius: 5px;
+}
+.link:hover {
+    background-color: hsla(0, 0%, 50%, 0.12);
+    -webkit-transition: background-color 150ms ease-in-out;
+    -o-transition: background-color 150ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
+}
+.loginBody {
+    margin-bottom: 50px;
+}
+.errorText,
+.accountSubTitle,
+.accountTitle {
+    text-align: center;
+}
+.errorText {
+    margin-top: 0.5em;
+    display: block;
+    height: 15px;
+    font-size: 18px;
+    color: var(--color-error);
+}
+.updateButton {
+    width: 220px;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 18px;
+    border: 1px solid hsl(0, 0%, 50%);
+}
+@media screen and (max-width: 600px) {
+    .accountBody {
+        width: 100%;
+        border: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+    }
+}
+.divider {
+    width: 90%;
+    margin-top: 50px;
+}
